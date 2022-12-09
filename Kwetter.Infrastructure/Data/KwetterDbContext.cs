@@ -13,8 +13,8 @@ internal class KwetterDbContext : DbContext
         Database.EnsureCreated();
     }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        new EventStoreMessageEntityTypeConfiguration().Configure(builder.Entity<EventStoreMessage>());
+        new EventStoreMessageEntityTypeConfiguration().Configure(modelBuilder.Entity<EventStoreMessage>());
     }
 }

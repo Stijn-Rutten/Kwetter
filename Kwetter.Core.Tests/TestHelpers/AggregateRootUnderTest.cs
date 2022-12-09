@@ -12,7 +12,7 @@ internal class AggregateRootUnderTest : AggregateRoot<int>
 
     public void ExecuteCommand()
     {
-        RaiseEvent(new TestDomainEvent());
+        RaiseEvent(new TestDomainEvent(Guid.NewGuid()));
     }
 
     protected override void When(dynamic @event)

@@ -58,14 +58,14 @@ internal class UserEventSourceRepository : IEventSourceRepository<UserId, User>
         }
     }
 
-    private EventStoreMessage SerializeDomainEvent(UserId userId, DomainEvent @event)
+    private static EventStoreMessage SerializeDomainEvent(UserId userId, DomainEvent @event)
     {
         var serializedEvent = JsonConvert.SerializeObject(@event);
 
         return new EventStoreMessage(@event.Id, userId.Value, @event.GetType().ToString(), serializedEvent, DateTimeOffset.Now);
     }
 
-    private DomainEvent DeserializeEventData(string messageType, string eventData)
+    private static DomainEvent DeserializeEventData(string messageType, string eventData)
     {
         Type? eventType = Type.GetType($"{nameof(Domain.Events)}.{messageType}");
 

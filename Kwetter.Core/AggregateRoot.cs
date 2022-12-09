@@ -8,23 +8,16 @@ public abstract class AggregateRoot<TId> : Entity<TId>
     public int OriginalVersion { get; private set; }
     public bool IsReplaying { get; set; } = false;
 
-    public AggregateRoot(TId id) : base(id)
+    protected AggregateRoot(TId id) : base(id)
     {
         OriginalVersion = 0;
         Version = 0;
         _events = new List<DomainEvent>();
     }
 
-    public AggregateRoot(TId id, IEnumerable<DomainEvent> events) : this(id)
+    protected AggregateRoot(TId id, IEnumerable<DomainEvent> events) : this(id)
     {
-        IsReplaying = true;
-        foreach(DomainEvent e in events)
-        {
-            When(e);
-            OriginalVersion++;
-            Version++;
-        }
-        IsReplaying = false;
+        ReplayEvents(events);
     }
 
     public IEnumerable<DomainEvent> GetEvents()
@@ -46,4 +39,16 @@ public abstract class AggregateRoot<TId> : Entity<TId>
     }
 
     protected abstract void When(dynamic @event);
+
+    private void ReplayEvents(IEnumerable<DomainEvent> events)
+    {
+        IsReplaying = true;
+        foreach (DomainEvent e in events)
+        {
+            When(e);
+            OriginalVersion++;
+            Version++;
+        }
+        IsReplaying = false;
+    }
 }
