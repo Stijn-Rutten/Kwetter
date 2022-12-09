@@ -47,7 +47,3 @@ public abstract class AggregateRoot<TId> : Entity<TId>
 
     protected abstract void When(dynamic @event);
 }
-
-public class DomainEvent
-{
-}

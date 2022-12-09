@@ -1,6 +1,6 @@
 ﻿namespace Kwetter.Core;
 
-public class Entity<TId>
+public abstract class Entity<TId>
 {
     public TId Id { get; private set; }
 

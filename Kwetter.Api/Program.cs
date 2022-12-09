@@ -1,4 +1,3 @@
-using Kwetter.Api.Authentication;
 using Kwetter.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +10,8 @@ builder.Services
     .AddEndpointsApiExplorer()
     .AddSwaggerGen();
 
-builder.Services.AddKwetterAuthentication().AddInfrastructure();
+builder.Services
+    .AddInfrastructure(builder.Configuration);
 
 
 var app = builder.Build();

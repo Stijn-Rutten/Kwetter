@@ -2,4 +2,4 @@
 
 namespace Kwetter.Domain.ValueObjects;
 
-public record UserId(Guid Id) : ValueObject;
+public record UserId(Guid Value) : ValueObject;

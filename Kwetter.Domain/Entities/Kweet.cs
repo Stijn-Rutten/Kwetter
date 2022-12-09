@@ -12,10 +12,10 @@ public class Kweet : Entity<Guid>
     {
     }
 
-    public void Post(string Content, UserId authorId)
+    public void Post(string content, UserId authorId, DateTimeOffset postedAt)
     {
-        this.Content = Content;
-        this.AuthorId = authorId;
-        this.PostedAt = DateTimeOffset.UtcNow;
+        Content = content;
+        AuthorId = authorId;
+        PostedAt = postedAt;
     }
 }

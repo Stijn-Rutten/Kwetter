@@ -1,4 +1,4 @@
-﻿using Kwetter.Api.Dtos;
+﻿using Kwetter.Domain.Commands;
 
 namespace Kwetter.Api.Controllers;
 
@@ -14,7 +14,7 @@ public class KweetController : Controller
     }
 
     [HttpGet()]
-    [Route("/user", Name = "GetKweetsForUser")]
+    [Route("user", Name = "GetKweetsForUser")]
     public async Task<IActionResult> GetKweetsAsync()
     {
         var aggregateId = new UserId(Guid.NewGuid());
@@ -26,8 +26,35 @@ public class KweetController : Controller
             return NotFound();
         }
 
-        var kweetDtos = user.Kweets.Select(k => KweetDto.MapFrom(k));
+        var kweetDtos = user.GetKweets(100, 0);
 
         return Ok(kweetDtos);
+    }
+
+    [HttpPost]
+    [Route("post", Name = "PostNewKweet")]
+    public async Task<IActionResult> PostKweetAsync(PostKweet command)
+    {
+        var aggregateId = new UserId(Guid.NewGuid());
+
+        User user = await _userRepo.GetByIdAsync(aggregateId);
+
+        if (user is null)
+        {
+            return BadRequest();
+        }
+
+        try
+        {
+            user.PostKweet(command);
+            await _userRepo.SaveAsync(user);
+
+            return Ok();
+        }
+        catch (BusinessRuleViolationException e)
+        {
+            return BadRequest(e.Message);
+        }
+
     }
 }

@@ -5,4 +5,5 @@ public interface IEventSourceRepository<TId, T>
     where T : AggregateRoot<TId>
 {
     Task<T> GetByIdAsync(TId id);
+    Task SaveAsync(T entity);
 }

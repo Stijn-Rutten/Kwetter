@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Kwetter.Core\Kwetter.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
-
 </Project>

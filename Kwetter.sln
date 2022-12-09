@@ -19,6 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kwetter.Core.Tests", "Kwett
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{30D100FF-DB7C-47DA-8258-0ADCA76EB873}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{C2A77E93-48EF-4449-997B-37AA1D2C865F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kwetter.Domain.Tests", "Kwetter.Domain.Tests\Kwetter.Domain.Tests.csproj", "{96B5E67D-5053-46A8-8F74-9C8A02C7702D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +56,10 @@ Global
 		{40476E74-3A49-4A39-A91A-A3963ADE4A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40476E74-3A49-4A39-A91A-A3963ADE4A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40476E74-3A49-4A39-A91A-A3963ADE4A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +71,7 @@ Global
 		{A32BF518-73A4-4D3A-9F6D-4503D150F1FB} = {30D100FF-DB7C-47DA-8258-0ADCA76EB873}
 		{31B6ACCD-9986-4412-9BAF-E05159442015} = {30D100FF-DB7C-47DA-8258-0ADCA76EB873}
 		{40476E74-3A49-4A39-A91A-A3963ADE4A4C} = {45D34918-0160-47EE-B6D3-9BC006DB412E}
+		{96B5E67D-5053-46A8-8F74-9C8A02C7702D} = {45D34918-0160-47EE-B6D3-9BC006DB412E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCADB5CA-9808-4442-A6CB-530D2DEBF501}
