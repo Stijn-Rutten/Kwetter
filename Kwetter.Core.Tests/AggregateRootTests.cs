@@ -43,10 +43,10 @@ public class AggregateRootTests
             // Arrange
             int id = 1;
             var events = new List<DomainEvent> {
-                new TestDomainEvent(),
-                new TestDomainEvent(),
-                new TestDomainEvent(),
-                new TestDomainEvent(),
+                new TestDomainEvent(Guid.NewGuid()),
+                new TestDomainEvent(Guid.NewGuid()),
+                new TestDomainEvent(Guid.NewGuid()),
+                new TestDomainEvent(Guid.NewGuid()),
             };
 
             // Act
@@ -92,8 +92,8 @@ public class AggregateRootTests
         {
             var events = new List<DomainEvent>
             {
-                new TestDomainEvent(),
-                new TestDomainEvent()
+                new TestDomainEvent(Guid.NewGuid()),
+                new TestDomainEvent(Guid.NewGuid())
             };
             var id = 1;
             var sut = new AggregateRootUnderTest(id, events);
