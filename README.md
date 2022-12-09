@@ -1,3 +1,9 @@
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Stijn-Rutten_Kwetter&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Stijn-Rutten_Kwetter)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Stijn-Rutten_Kwetter&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Stijn-Rutten_Kwetter)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Stijn-Rutten_Kwetter&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Stijn-Rutten_Kwetter)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Stijn-Rutten_Kwetter&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Stijn-Rutten_Kwetter)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Stijn-Rutten_Kwetter&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Stijn-Rutten_Kwetter)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Stijn-Rutten_Kwetter&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Stijn-Rutten_Kwetter)
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
