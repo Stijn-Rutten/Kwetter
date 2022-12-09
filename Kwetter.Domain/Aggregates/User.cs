@@ -19,8 +19,6 @@ public class User : AggregateRoot<UserId>
 
     public void PostKweet(PostKweet command)
     {
-        // TODO: Validate Business Rules
-
         var e = command.MapToKweetPosted(Guid.NewGuid());
 
         RaiseEvent(e);
