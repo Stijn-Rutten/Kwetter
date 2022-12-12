@@ -10,11 +10,13 @@ builder.Services
     .AddEndpointsApiExplorer()
     .AddSwaggerGen();
 
-builder.Services
+builder
     .AddInfrastructure(builder.Configuration);
 
 
 var app = builder.Build();
+
+app.AddInfrastructure();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
