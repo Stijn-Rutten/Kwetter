@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  logserver:
+    image: datalust/seq:latest
+    container_name: logserver
+    ports:
+      - "5341:80"
+    environment:
+      - ACCEPT_EULA=Y
+
+  kwetter-api:
+    image: kwetter-api:1.0.0
+    container_name: kwetter-api
+    ports:
+      - "5010:80"
