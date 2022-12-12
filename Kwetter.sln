@@ -24,7 +24,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kwetter.Domain.Tests", "Kwetter.Domain.Tests\Kwetter.Domain.Tests.csproj", "{96B5E67D-5053-46A8-8F74-9C8A02C7702D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kwetter.Domain.Tests", "Kwetter.Domain.Tests\Kwetter.Domain.Tests.csproj", "{96B5E67D-5053-46A8-8F74-9C8A02C7702D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{748B2721-EADB-43A1-8DF1-2B7447FC432B}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
