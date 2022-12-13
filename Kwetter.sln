@@ -28,8 +28,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kwetter.Domain.Tests", "Kwe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{748B2721-EADB-43A1-8DF1-2B7447FC432B}"
 	ProjectSection(SolutionItems) = preProject
+		Deploy-Local.ps1 = Deploy-Local.ps1
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kwetter.Infrastructure.Tests", "Kwetter.Infrastructure.Tests\Kwetter.Infrastructure.Tests.csproj", "{6DDA8624-21AE-4386-B72C-E53C15FFEA28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +68,10 @@ Global
 		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B5E67D-5053-46A8-8F74-9C8A02C7702D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDA8624-21AE-4386-B72C-E53C15FFEA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDA8624-21AE-4386-B72C-E53C15FFEA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDA8624-21AE-4386-B72C-E53C15FFEA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDA8624-21AE-4386-B72C-E53C15FFEA28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +84,7 @@ Global
 		{31B6ACCD-9986-4412-9BAF-E05159442015} = {30D100FF-DB7C-47DA-8258-0ADCA76EB873}
 		{40476E74-3A49-4A39-A91A-A3963ADE4A4C} = {45D34918-0160-47EE-B6D3-9BC006DB412E}
 		{96B5E67D-5053-46A8-8F74-9C8A02C7702D} = {45D34918-0160-47EE-B6D3-9BC006DB412E}
+		{6DDA8624-21AE-4386-B72C-E53C15FFEA28} = {45D34918-0160-47EE-B6D3-9BC006DB412E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCADB5CA-9808-4442-A6CB-530D2DEBF501}
