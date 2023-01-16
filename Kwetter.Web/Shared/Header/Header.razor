@@ -1,12 +1,18 @@
-﻿<div class="header">
-    <a href="/" class="header__logo">Kwetter</a>
-
-    <ul class="navbar">
-        <li class="navbar__item">Trending</li>
-        <li class="navbar__item">Account</li>
-    </ul>
-</div>
-
-@code {
-
-}
+﻿<header class="mx-4 my-2 px-8 py-4 border-2 rounded-lg shadow">
+    <div class="flex flex-row items-center justify-between">
+        <h1 class="font-extrabold text-3xl tracking-wider">Kwetter</h1>
+        <nav>
+            <ul class="flex flex-row space-x-4">
+                <li class="cursor-pointer transition border-2 border-blue-500 py-2 px-4 rounded-full bg-blue-500 text-white hover:text-blue-500 hover:bg-white">
+                    <a href="#" >Home</a>
+                </li>
+                <li class="cursor-pointer transition border-2 border-blue-500 py-2 px-4 rounded-full bg-blue-500 text-white hover:text-blue-500 hover:bg-white">
+                    <a href="#">Timeline</a>
+                </li>
+                <li class="cursor-pointer transition border-2 border-blue-500 py-2 px-4 rounded-full bg-blue-500 text-white hover:text-blue-500 hover:bg-white">
+                    <a href="#">Account</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
