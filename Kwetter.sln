@@ -32,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kwetter.Infrastructure.Tests", "Kwetter.Infrastructure.Tests\Kwetter.Infrastructure.Tests.csproj", "{6DDA8624-21AE-4386-B72C-E53C15FFEA28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kwetter.Infrastructure.Tests", "Kwetter.Infrastructure.Tests\Kwetter.Infrastructure.Tests.csproj", "{6DDA8624-21AE-4386-B72C-E53C15FFEA28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
