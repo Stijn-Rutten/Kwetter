@@ -1,15 +1,10 @@
-﻿@inherits LayoutComponentBase
+﻿@using Kwetter.Web.Shared.Header
+
+@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
     <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
+        <Header />
         <article class="content px-4">
             @Body
         </article>

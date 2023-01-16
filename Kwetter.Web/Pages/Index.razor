@@ -1,9 +1,11 @@
 ﻿@page "/"
+@using Kwetter.Web.Shared.Kweets
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<KweetForm />
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@for(int x = 0; x < 10; x++) {
+    <Kweet />
+}

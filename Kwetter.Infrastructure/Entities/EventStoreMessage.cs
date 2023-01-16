@@ -1,6 +1,6 @@
 ﻿namespace Kwetter.Infrastructure.Entities;
 
-internal record EventStoreMessage(
+public record EventStoreMessage(
     Guid Id,
     Guid AggregateId,
     string MessageType,

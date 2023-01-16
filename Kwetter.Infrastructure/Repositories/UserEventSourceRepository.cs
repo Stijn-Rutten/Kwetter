@@ -1,5 +1,6 @@
 ﻿using Kwetter.Core;
 using Kwetter.Domain.Aggregates;
+using Kwetter.Domain.Exceptions;
 using Kwetter.Domain.ValueObjects;
 using Kwetter.Infrastructure.Data;
 using Kwetter.Infrastructure.Entities;
@@ -9,7 +10,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Kwetter.Infrastructure.Repositories;
 
-internal class UserEventSourceRepository : IEventSourceRepository<UserId, User>
+public class UserEventSourceRepository : IEventSourceRepository<UserId, User>
 {
     private readonly KwetterDbContext _dbContext;
 
@@ -21,10 +22,15 @@ internal class UserEventSourceRepository : IEventSourceRepository<UserId, User>
     public async Task<User> GetByIdAsync(UserId id)
     {
         // Query all the events from the event store with the associated aggregate Value
-        var events = await _dbContext.Messages
+        List<EventStoreMessage> events = await _dbContext.Messages
             .Where(m => m.AggregateId == id.Value)
             .OrderBy(e => e.CreatedAt)
             .ToListAsync();
+
+        if (events.Count == 0)
+        {
+            throw new UserNotFoundException(id);
+        }
 
         var domainEvents = events.Select(e => DeserializeEventData(e.MessageType, e.EventData));
       

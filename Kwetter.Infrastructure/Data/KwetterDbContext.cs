@@ -4,9 +4,14 @@ using Kwetter.Infrastructure.Entities;
 
 namespace Kwetter.Infrastructure.Data;
 
-internal class KwetterDbContext : DbContext
+public class KwetterDbContext : DbContext
 {
-    public DbSet<EventStoreMessage> Messages { get; set; }
+    public virtual DbSet<EventStoreMessage> Messages { get; set; }
+
+    public KwetterDbContext()
+    {
+
+    }
 
     public KwetterDbContext(DbContextOptions options) : base(options)
     {
