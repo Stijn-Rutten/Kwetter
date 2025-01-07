@@ -1,14 +1,18 @@
 {
-    "packageRules": [
-        {
-          "matchUpdateTypes": ["minor", "patch"],
-          "groupName": "all-non-major-updates",
-          "automerge": true
-        },
-        {
-          "matchUpdateTypes": ["major"],
-          "groupName": "all-major-updates",
-          "automerge": false
-        }
-      ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all-non-major-updates",
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "groupName": "all-major-updates",
+      "automerge": false
+    }
+  ]
 }
