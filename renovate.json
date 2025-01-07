@@ -1,0 +1,14 @@
+{
+    "packageRules": [
+        {
+          "matchUpdateTypes": ["minor", "patch"],
+          "groupName": "all-non-major-updates",
+          "automerge": true
+        },
+        {
+          "matchUpdateTypes": ["major"],
+          "groupName": "all-major-updates",
+          "automerge": false
+        }
+      ]
+}
